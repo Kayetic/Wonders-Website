@@ -22,3 +22,22 @@ hamburgerMenu.addEventListener("click", function () {
     hidden = true;
   }
 });
+
+// detecting ctrl key
+function onCtrlKeyDown(event) {
+  if (event.ctrlKey) {
+    // The `Ctrl` key is down.
+    console.log("ctrl key down");
+  }
+}
+document.addEventListener("keydown", onCtrlKeyDown);
+
+// holding mouse position
+window.addEventListener("mousemove", (event) => {
+  // Get the current position of the mouse.
+  let x = event.clientX;
+  let y = event.clientY;
+
+  // Do something with the mouse position.
+  console.log(`The mouse is at position (${x}, ${y})`);
+});
