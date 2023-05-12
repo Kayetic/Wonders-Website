@@ -11,7 +11,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Inconsolata", sans-serif;
+  font-family: "Heming", sans-serif;
   color: whitesmoke;
   /* outline: red dashed 1px; */
 }
@@ -39,6 +39,7 @@ html {
 
 a {
   text-decoration: none;
+  font-family: "Heming", sans-serif;
 }
 
 li {
@@ -50,11 +51,12 @@ li {
   width: fit-content;
   transition: transform 1s cubic-bezier(0, 0, 0.05, 1);
   transform: translateX(-400%);
-  transition: letter-spacing 0.5s;
+  /* transition: letter-spacing 0.5s; */
   /* letter-spacing: 0.005px; */
 }
 
 .menu-item {
+  font-family: "Heming", sans-serif;
   /* transition: all 0.5s; */
   transition: all 1s cubic-bezier(0, 0, 0.05, 1);
 }
