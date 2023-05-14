@@ -16,6 +16,11 @@
   /* outline: red dashed 1px; */
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 #overlay {
   position: fixed;
   top: 0;
@@ -43,9 +48,9 @@ a {
 }
 
 li {
-  font-size: 12px;
+  font-size: 32px;
   list-style: none;
-  margin-bottom: 15px;
+  margin-bottom: 2rem;
   opacity: 55%;
   transition: all 0.5s;
   width: fit-content;
@@ -67,14 +72,27 @@ li:hover {
 }
 
 #hamburger-menu {
-  font-size: 8px;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
   z-index: 3;
   opacity: 65%;
   transition: all 0.75s;
 }
 
 .navigation-menu {
-  margin: 0.75rem 0 0 1rem;
+  margin: 2.75rem 0 0 2rem;
   height: 100%;
+}
+
+.floating-element {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: fit-content;
+  height: fit-content;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  transition: all 1s ease-in-out;
 }
