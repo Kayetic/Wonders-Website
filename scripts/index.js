@@ -2,6 +2,9 @@ const hamburgerMenu = document.getElementById("hamburger-menu");
 const menuItemsList = document.querySelectorAll(".menu-item");
 const overlay = document.getElementById("overlay");
 
+const leftElement = document.getElementById("left-element");
+const rightElement = document.getElementById("right-element");
+
 let hidden = true;
 
 hamburgerMenu.addEventListener("click", function () {
@@ -34,10 +37,11 @@ document.addEventListener("keydown", onCtrlKeyDown);
 
 // holding mouse position
 window.addEventListener("mousemove", (event) => {
-  // Get the current position of the mouse.
+  const firstFloating = document.querySelector(".floating--1");
+  const secondFloating = document.querySelector(".floating--2");
+  const thirdFloating = document.querySelector(".floating--3");
+  const fourthFloating = document.querySelector(".floating--4");
+
   let x = event.clientX;
   let y = event.clientY;
-
-  // Do something with the mouse position.
-  console.log(`The mouse is at position (${x}, ${y})`);
 });
