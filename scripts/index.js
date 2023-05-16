@@ -35,13 +35,34 @@ function onCtrlKeyDown(event) {
 }
 document.addEventListener("keydown", onCtrlKeyDown);
 
-// holding mouse position
-window.addEventListener("mousemove", (event) => {
-  const firstFloating = document.querySelector(".floating--1");
-  const secondFloating = document.querySelector(".floating--2");
-  const thirdFloating = document.querySelector(".floating--3");
-  const fourthFloating = document.querySelector(".floating--4");
+const centeredElement = document.querySelector(".centered-element");
+const boundingElement = document.querySelector(".bounding-element");
 
-  let x = event.clientX;
-  let y = event.clientY;
+const ball = document.querySelector("div.ball");
+
+let mouseX = 0;
+let mouseY = 0;
+
+let ballX = 0;
+let ballY = 0;
+
+let speed = 0.06;
+
+function animate() {
+  let distX = mouseX - ballX;
+  let distY = mouseY - ballY;
+
+  ballX = ballX + distX * speed;
+  ballY = ballY + distY * speed;
+
+  ball.style.left = ballX + "px";
+  ball.style.top = ballY + "px";
+
+  requestAnimationFrame(animate);
+}
+animate();
+
+document.addEventListener("mousemove", function (event) {
+  mouseX = event.pageX;
+  mouseY = event.pageY;
 });
