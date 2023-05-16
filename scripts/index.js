@@ -38,9 +38,16 @@ document.addEventListener("keydown", onCtrlKeyDown);
 const centeredElement = document.querySelector(".centered-element");
 const boundingElement = document.querySelector(".bounding-element");
 
+const firstFloating = document.querySelector(".first-floating");
+const secondFloating = document.querySelector(".second-floating");
+const thirdFloating = document.querySelector(".third-floating");
+const fourthFloating = document.querySelector(".fourth-floating");
+
+let hiddenFloating = [];
+
 const movementFunction = function (elementName, speedToUse) {
   const elementToChange = document.querySelector(elementName);
-  elementToChange.style.transform = "scale(1)";
+
   let mouseX = 0;
   let mouseY = 0;
 
