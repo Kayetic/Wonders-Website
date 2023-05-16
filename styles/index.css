@@ -134,6 +134,7 @@ div.first-floating {
   top: 0;
   left: 0;
   transform: translate(-50%, -50%);
+  /* transition: opacity 1s ease-out; */
 
   /* mix-blend-mode: difference; */
 }
