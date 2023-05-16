@@ -38,16 +38,16 @@ document.addEventListener("keydown", onCtrlKeyDown);
 const centeredElement = document.querySelector(".centered-element");
 const boundingElement = document.querySelector(".bounding-element");
 
-const firstMovementFunction = function (event) {
-  const ball = document.querySelector("div.ball");
-
+const movementFunction = function (elementName, speedToUse) {
+  const elementToChange = document.querySelector(elementName);
+  elementToChange.style.transform = "scale(1)";
   let mouseX = 0;
   let mouseY = 0;
 
   let ballX = 0;
   let ballY = 0;
 
-  let speed = 0.06;
+  let speed = speedToUse;
 
   function animate() {
     let distX = mouseX - ballX;
@@ -56,8 +56,8 @@ const firstMovementFunction = function (event) {
     ballX = ballX + distX * speed;
     ballY = ballY + distY * speed;
 
-    ball.style.left = ballX + "px";
-    ball.style.top = ballY + "px";
+    elementToChange.style.left = ballX + "px";
+    elementToChange.style.top = ballY + "px";
 
     requestAnimationFrame(animate);
   }
@@ -69,4 +69,5 @@ const firstMovementFunction = function (event) {
   });
 };
 
-firstMovementFunction();
+movementFunction("div.first-floating", 0.04);
+movementFunction("div.second-floating", 0.01);

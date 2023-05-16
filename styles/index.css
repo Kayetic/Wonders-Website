@@ -124,33 +124,63 @@ li:hover {
   transform: scale(0);
 }
 
-div.ball {
+div.first-floating {
   background-color: #ffffff;
   width: 400px;
   /* height: 400px; */
   height: fit-content;
-  /* border-radius: 50%; */
   pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
   transform: translate(-50%, -50%);
 
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 
-.ball h2,
-p {
+.first-floating h2,
+.first-floating p {
   color: black;
   padding: 9px 18px;
 }
 
-.ball h2 {
+.first-floating h2 {
   font-size: 32px;
   padding-top: 16px;
 }
 
-.ball p {
-  font-size: 22px;
+.first-floating p {
+  font-family: "Monserrat", sans-serif;
+  font-size: 19px;
+  padding-bottom: 16px;
+}
+
+div.second-floating {
+  background-color: #ffffff;
+  width: 300px;
+
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+
+  /* mix-blend-mode: difference; */
+}
+
+.second-floating h2,
+.second-floating p {
+  color: black;
+  padding: 9px 18px;
+}
+
+.second-floating h2 {
+  font-size: 32px;
+  padding-top: 16px;
+}
+
+.second-floating p {
+  font-family: "Monserrat", sans-serif;
+  font-size: 19px;
   padding-bottom: 16px;
 }
