@@ -88,3 +88,100 @@ li:hover {
   margin: 2.75rem 0 0 2rem;
   height: fit-content;
 }
+
+.floating-element {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: fit-content;
+  height: fit-content;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  transition: all 1s ease-in-out;
+}
+
+.bounding-element {
+  position: fixed;
+  /* position: relative; */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* background-color: red; */
+  z-index: -2;
+}
+
+.centered-element {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: blue;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform: scale(0);
+}
+
+div.first-floating {
+  background-color: #ffffff;
+  width: 400px;
+  /* height: 400px; */
+  height: fit-content;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  /* transition: opacity 1s ease-out; */
+
+  /* mix-blend-mode: difference; */
+}
+
+.first-floating h2,
+.first-floating p {
+  color: black;
+  padding: 9px 18px;
+}
+
+.first-floating h2 {
+  font-size: 32px;
+  padding-top: 16px;
+}
+
+.first-floating p {
+  font-family: "Monserrat", sans-serif;
+  font-size: 19px;
+  padding-bottom: 16px;
+}
+
+div.second-floating {
+  background-color: #ffffff;
+  width: 300px;
+
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+
+  /* mix-blend-mode: difference; */
+}
+
+.second-floating h2,
+.second-floating p {
+  color: black;
+  padding: 9px 18px;
+}
+
+.second-floating h2 {
+  font-size: 32px;
+  padding-top: 16px;
+}
+
+.second-floating p {
+  font-family: "Monserrat", sans-serif;
+  font-size: 19px;
+  padding-bottom: 16px;
+}
