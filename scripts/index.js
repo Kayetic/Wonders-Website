@@ -46,7 +46,12 @@ firstNavItem.addEventListener("click", function () {
   // set height to 80vh
   firstNavItem.style.height = "fit-content";
   // add lorem ipsum text under the heading of the nav item
-  firstNavItem.innerHTML += `<p class="nav--1--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>`;
+
+  firstNavItem.innerHTML = `<h2 class="nav--1--heading">What is it?</h2><p class="nav--1--text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel earum eaque eum enim vitae aspernatur repellat libero. Mollitia molestiae sit vitae, quidem laboriosam quibusdam facilis at hic quaerat ea, id quis ducimus error consequuntur ratione recusandae deserunt nesciunt, dolorem officiis in cumque dolor ex! Iusto dolorum saepe eius voluptate nemo!</p>`;
   // set width to double the current width
+  const navItemHeading = document.querySelector(".nav--1--heading");
+  const navItemText = document.querySelector(".nav--1--text");
+  navItemHeading.style.color = "black";
+  navItemText.style.color = "black";
   firstNavItem.style.width = "20vw";
 });
