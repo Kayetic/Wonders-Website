@@ -26,6 +26,15 @@ hamburgerMenu.addEventListener("click", function () {
   }
 });
 
+function closeMenu() {
+  menuItemsList.forEach((item, index) => {
+    item.style.transform = "translateX(-400%)";
+  });
+  hamburgerMenu.style.opacity = "65%";
+  overlay.style.opacity = "0%";
+  hidden = true;
+}
+
 // detecting ctrl key
 function onCtrlKeyDown(event) {
   if (event.ctrlKey) {
@@ -41,17 +50,34 @@ const thirdNavItem = document.querySelector(".nav--3");
 const fourthNavItem = document.querySelector(".nav--4");
 
 firstNavItem.addEventListener("click", function () {
+  closeMenu();
+  // Add the expanded-width class to apply the transition effect
+  // Update the width property
+  firstNavItem.style.width = "fit-content";
   firstNavItem.style.backgroundColor = "#f2f2f2";
   firstNavItem.style.color = "#000";
-  // set height to 80vh
   firstNavItem.style.height = "fit-content";
-  // add lorem ipsum text under the heading of the nav item
 
-  firstNavItem.innerHTML = `<h2 class="nav--1--heading">What is it?</h2><p class="nav--1--text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel earum eaque eum enim vitae aspernatur repellat libero. Mollitia molestiae sit vitae, quidem laboriosam quibusdam facilis at hic quaerat ea, id quis ducimus error consequuntur ratione recusandae deserunt nesciunt, dolorem officiis in cumque dolor ex! Iusto dolorum saepe eius voluptate nemo!</p>`;
-  // set width to double the current width
+  firstNavItem.innerHTML = `<h2 class="nav--1--heading">What is it?</h2><p class="nav--1--text">The Great Pyramid of Giza is an ancient Egyptian burial monument built around 4,500 years ago for Pharaoh Khufu. It is the largest of the pyramids in the Giza complex, standing approximately 481 feet tall. Constructed with millions of stone blocks, it showcases the advanced engineering skills of the ancient Egyptians and remains a popular tourist attraction today.</p>`;
+  document.querySelector(".nav--1--heading").style.textAlign = "center";
+  document.querySelector(".nav--1--heading").style.marginBottom = "1rem";
+  document.querySelector(".nav--1--heading").style.marginTop = "1rem";
+  document.querySelector(".nav--1--text").style.margin = "1rem";
+
   const navItemHeading = document.querySelector(".nav--1--heading");
   const navItemText = document.querySelector(".nav--1--text");
   navItemHeading.style.color = "black";
   navItemText.style.color = "black";
   firstNavItem.style.width = "20vw";
+});
+
+// make it so clicking anywhere outside the element will close the element to its original size
+document.addEventListener("click", function (e) {
+  if (e.target !== firstNavItem) {
+    firstNavItem.style.height = "5vh";
+    firstNavItem.style.width = "10vw";
+    firstNavItem.style.backgroundColor = "transparent";
+    firstNavItem.style.color = "#fff";
+    firstNavItem.innerHTML = "What is it?";
+  }
 });
