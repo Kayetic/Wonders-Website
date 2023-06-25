@@ -113,8 +113,8 @@ li:hover {
   justify-content: space-around;
 }
 
-.nav-item {
-  /* width: 10vw; */
-  width: fit-content; /* Set this to your default width */
-  transition: width 1s cubic-bezier(0, 0, 0.05, 1);
+/* cubic-bezier(0, 0, 0.05, 1); */
+
+.nav--1 {
+  transition: all 0.5s cubic-bezier(0, 0, 0.05, 1);
 }
